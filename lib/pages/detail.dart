@@ -15,11 +15,70 @@ class DetailPage extends StatelessWidget {
           width: 400,
           decoration: BoxDecoration(
               image: DecorationImage(
+                  fit: BoxFit.fill,
                   image: AssetImage(
-            'assets/Icon/1-1.png',
-          ))),
+                    'assets/Icon/1-1.png',
+                  ))),
           child: Stack(
-            children: [],
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: 40, left: 20, right: 20),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(30),
+                        child: Stack(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                    height: 40,
+                                    width: 40,
+                                    //color: Color.fromARGB(31, 7, 0, 0),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(25)),
+                                    ),
+                                    child: InkWell(
+                                      child:
+                                          Icon(Icons.arrow_back_ios_outlined),
+                                    )),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(30),
+                        child: Stack(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                    height: 40,
+                                    width: 40,
+                                    //color: Color.fromARGB(31, 7, 0, 0),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(25)),
+                                    ),
+                                    child: InkWell(
+                                      child:
+                                          Icon(Icons.favorite_outline_outlined),
+                                    )),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ]),
+              )
+            ],
           ),
         ),
         bottomSheet: Container(
