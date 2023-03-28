@@ -1,4 +1,5 @@
 import 'package:aesha_app/pages/explore.dart';
+import 'package:aesha_app/widgets/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -95,25 +96,28 @@ class SplashPage extends StatelessWidget {
 //
 
                     //button masuk
-                    Container(
-                      width: 150,
-                      height: 45,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.deepPurple),
-                        onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(
-                            builder: (context) {
-                              return const Explore();
-                            },
-                          ));
-                        },
-                        child: Text(
-                          "Explore Now",
-                          style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.white,
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(30),
+                      child: Container(
+                        width: 200,
+                        height: 50,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.deepPurple),
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(
+                              builder: (context) {
+                                return const Menu();
+                              },
+                            ));
+                          },
+                          child: Text(
+                            "Explore Now",
+                            style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),

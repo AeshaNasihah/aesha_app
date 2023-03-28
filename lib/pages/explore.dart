@@ -15,7 +15,6 @@ class Explore extends StatelessWidget {
         body: SingleChildScrollView(
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      const Menu(),
       //Header Halaman Explore atau Home
       Padding(
         padding:
@@ -56,7 +55,7 @@ class Explore extends StatelessWidget {
             Text("Popular Cities",
                 style: GoogleFonts.poppins(
                     fontSize: 18, fontWeight: FontWeight.w600)),
-            const SizedBox(height: 8),
+            const SizedBox(height: 15),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -195,12 +194,12 @@ class Explore extends StatelessWidget {
                                 Image.asset(
                                   "assets/Icon/1-1.png",
                                   height: 110,
-                                  width: 120,
+                                  width: 123,
                                 ),
                                 Container(
                                   margin: const EdgeInsets.only(top: 100),
                                   padding: const EdgeInsets.only(
-                                      left: 40, right: 35, top: 10, bottom: 10),
+                                      left: 33, right: 30, top: 10, bottom: 10),
                                   decoration: BoxDecoration(
                                     color: Color.fromARGB(255, 230, 229, 231),
                                     borderRadius: BorderRadius.only(
@@ -238,175 +237,221 @@ class Explore extends StatelessWidget {
             Text("Recommended Space",
                 style: GoogleFonts.poppins(
                     fontSize: 18, fontWeight: FontWeight.w600)),
-            const SizedBox(height: 8),
+            const SizedBox(height: 15),
 
             //Recomended 1
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  padding: EdgeInsets.only(right: 20),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(20),
-                    ),
-                    child: Container(
-                      child: Stack(
-                        children: [
-                          Image.asset(
-                            "assets/Icon/5.png",
-                            height: 100,
-                            width: 100,
-                          ),
-
-                          //stack 1
-                          Container(
-                            margin: const EdgeInsets.only(
-                              right: 223,
-                              left: 48,
-                              top: 7,
-                            ),
-                            padding: const EdgeInsets.only(
-                                top: 4, left: 8, bottom: 4, right: 4),
-                            decoration: BoxDecoration(
-                              color: const Color(0xff5843BE),
-                              borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(8),
-                                  bottomLeft: Radius.circular(20)),
-                            ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.star_rounded,
-                                  color: Colors.amber,
-                                  size: 20,
-                                ),
-                                Text('4/5',
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.normal,
-                                        color: Colors.white)),
-                              ],
-                            ),
-                          ),
-                        ],
+                  height: 100,
+                  width: 100,
+                  margin: const EdgeInsets.only(right: 20),
+                  child: Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.asset(
+                          "assets/Icon/5.png",
+                          // height: 100,
+                          // width: 100,
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                    ),
+
+                      //stack 1
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 5,
+                          ),
+                          decoration: BoxDecoration(
+                            color: const Color(0xff5843BE),
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20),
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                Icons.star_rounded,
+                                color: Colors.amber,
+                                size: 20,
+                              ),
+                              Text(
+                                '4/5',
+                                style: GoogleFonts.poppins(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.normal,
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                Text("data")
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Kuretakeso Hott"),
+                      Text("\$52 / month"),
+                      const SizedBox(height: 16),
+                      Text("Bandung, Germany"),
+                    ],
+                  ),
+                ),
               ],
             ),
+            const SizedBox(height: 10),
 
             //Recomended 2
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  padding: EdgeInsets.only(right: 20),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(20),
-                    ),
-                    child: Container(
-                      child: Stack(
-                        children: [
-                          Image.asset(
-                            "assets/Icon/6.png",
-                            height: 100,
-                            width: 100,
-                          ),
-
-                          //stack 1
-                          Container(
-                            margin: const EdgeInsets.only(
-                              right: 223,
-                              left: 48,
-                              top: 7,
-                            ),
-                            padding: const EdgeInsets.only(
-                                top: 4, left: 8, bottom: 4, right: 4),
-                            decoration: BoxDecoration(
-                              color: const Color(0xff5843BE),
-                              borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(8),
-                                  bottomLeft: Radius.circular(20)),
-                            ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.star_rounded,
-                                  color: Colors.amber,
-                                  size: 20,
-                                ),
-                                Text('5/5',
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.normal,
-                                        color: Colors.white)),
-                              ],
-                            ),
-                          ),
-                        ],
+                  height: 100,
+                  width: 100,
+                  margin: const EdgeInsets.only(right: 20),
+                  child: Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.asset(
+                          "assets/Icon/6.png",
+                          // height: 100,
+                          // width: 100,
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                    ),
+
+                      //stack 1
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 5,
+                          ),
+                          decoration: BoxDecoration(
+                            color: const Color(0xff5843BE),
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20),
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                Icons.star_rounded,
+                                color: Colors.amber,
+                                size: 20,
+                              ),
+                              Text(
+                                '5/5',
+                                style: GoogleFonts.poppins(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Roemah Nenek"),
+                      Text("\$11 / month"),
+                      const SizedBox(height: 16),
+                      Text("Seattle, Bogor"),
+                    ],
                   ),
                 ),
               ],
             ),
+            const SizedBox(height: 10),
 
             //Recomended 3
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  padding: EdgeInsets.only(right: 20),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(20),
-                    ),
-                    child: Container(
-                      child: Stack(
-                        children: [
-                          Image.asset(
-                            "assets/Icon/4.png",
-                            height: 100,
-                            width: 100,
-                          ),
-
-                          //stack 1
-                          Container(
-                            margin: const EdgeInsets.only(
-                              right: 223,
-                              left: 48,
-                              top: 7,
-                            ),
-                            padding: const EdgeInsets.only(
-                                top: 4, left: 8, bottom: 4, right: 4),
-                            decoration: BoxDecoration(
-                              color: const Color(0xff5843BE),
-                              borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(8),
-                                  bottomLeft: Radius.circular(20)),
-                            ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.star_rounded,
-                                  color: Colors.amber,
-                                  size: 20,
-                                ),
-                                Text('3/5',
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.normal,
-                                        color: Colors.white)),
-                              ],
-                            ),
-                          ),
-                        ],
+                  height: 100,
+                  width: 100,
+                  margin: const EdgeInsets.only(right: 20),
+                  child: Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.asset(
+                          "assets/Icon/4.png",
+                          // height: 100,
+                          // width: 100,
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                    ),
+
+                      //stack 1
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 5,
+                          ),
+                          decoration: BoxDecoration(
+                            color: const Color(0xff5843BE),
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              bottomLeft: Radius.circular(20),
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                Icons.star_rounded,
+                                color: Colors.amber,
+                                size: 20,
+                              ),
+                              Text(
+                                '3/5',
+                                style: GoogleFonts.poppins(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Darrling How"),
+                      Text("\$20 / month"),
+                      const SizedBox(height: 16),
+                      Text("Jakarta, Indonesia"),
+                    ],
                   ),
                 ),
               ],
@@ -422,10 +467,10 @@ class Explore extends StatelessWidget {
             Text("Tips & Guidance",
                 style: GoogleFonts.poppins(
                     fontSize: 18, fontWeight: FontWeight.w600)),
-            const SizedBox(height: 8),
+            const SizedBox(height: 15),
 
             //tips 1
-            Column(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
@@ -483,15 +528,36 @@ class Explore extends StatelessWidget {
                     ),
                   ),
                 ),
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("City Guidelines"),
+                          const SizedBox(height: 10),
+                          Text("Updated 20 Apr "),
+                        ],
+                      ),
+                      Icon(
+                        Icons.arrow_right_sharp,
+                        size: 30,
+                      )
+                    ],
+                  ),
+                ),
               ],
             ),
 
+            const SizedBox(height: 15),
+
             //tips 2
-            Column(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  padding: const EdgeInsets.only(top: 16),
+                  padding: EdgeInsets.only(right: 12),
                   child: ClipRRect(
                     borderRadius: BorderRadius.all(
                       Radius.circular(25),
@@ -518,15 +584,50 @@ class Explore extends StatelessWidget {
                                           topRight: Radius.circular(8),
                                           bottomLeft: Radius.circular(20)),
                                     ),
-                                    child: Icon(Icons.filter_list_rounded,
-                                        size: 40, color: Colors.white),
+                                    child: Icon(
+                                      Icons.filter_list_rounded,
+                                      size: 40,
+                                      color: Colors.white,
+                                    ),
                                     alignment: Alignment.centerLeft),
+
+                                //stack 2
+                                Container(
+                                  padding: const EdgeInsets.only(
+                                    top: 2,
+                                    bottom: 10,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 56, 20, 90),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(20)),
+                                  ),
+                                ),
                               ],
                             ),
                           ),
                         ],
                       ),
                     ),
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Jakarta Fairship"),
+                          const SizedBox(height: 10),
+                          Text("Updated 11 Dec "),
+                        ],
+                      ),
+                      Icon(
+                        Icons.arrow_right_sharp,
+                        size: 30,
+                      )
+                    ],
                   ),
                 ),
               ],
