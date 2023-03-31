@@ -1,11 +1,8 @@
-import 'package:aesha_app/widgets/header.dart';
-import 'package:aesha_app/pages/explore.dart';
-import 'package:aesha_app/pages/mail.dart';
 import 'package:aesha_app/pages/card.dart';
+import 'package:aesha_app/pages/explore.dart';
 import 'package:aesha_app/pages/favorite.dart';
+import 'package:aesha_app/pages/mail.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class Menu extends StatefulWidget {
   const Menu({super.key});

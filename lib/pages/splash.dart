@@ -1,7 +1,5 @@
-import 'package:aesha_app/pages/explore.dart';
+import 'package:aesha_app/widgets/menu.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashPage extends StatelessWidget {
@@ -104,7 +102,7 @@ class SplashPage extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(context, MaterialPageRoute(
                             builder: (context) {
-                              return const Explore();
+                              return const Menu();
                             },
                           ));
                         },
